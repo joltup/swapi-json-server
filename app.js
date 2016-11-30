@@ -7,6 +7,8 @@ const species = require('./species.json');
 const starships = require('./starships.json');
 const transport = require('./transport.json');
 const vehicles = require('./vehicles.json');
+const peoplefavorites = [];
+
 
 const db = {
     films,
@@ -15,7 +17,8 @@ const db = {
     species,
     starships,
     transport,
-    vehicles
+    vehicles,
+    peoplefavorites,
 };
 
 
@@ -120,4 +123,6 @@ server.use(jsonServer.defaults());
 const router = jsonServer.router(relationDb);
 server.use(router);
 
-server.listen(3000);
+console.log("API on port 3008")
+
+server.listen(3008);
